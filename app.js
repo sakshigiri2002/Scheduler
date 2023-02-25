@@ -14,7 +14,7 @@ app.use(express.static("public"));
 
 mongoose.set('strictQuery', true);
 var url = process.env.MONGO_URL;
-mongoose.connect("mongodb://mongo:RASUouSx43jLDkPg1B3D@containers-us-west-135.railway.app:7585/schedule", {useNewUrlParser: true});
+mongoose.connect(url, {useNewUrlParser: true});
 const apiSchema = new mongoose.Schema({
     schedule_time : String,
     slot: String,
