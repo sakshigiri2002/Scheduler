@@ -13,7 +13,8 @@ app.use(express.static("public"));
 
 
 mongoose.set('strictQuery', true);
-mongoose.connect(process.env.MONGO_URL, {useNewUrlParser: true});
+var url = process.env.MONGO_URL+"/schedule";
+mongoose.connect(url, {useNewUrlParser: true});
 const apiSchema = new mongoose.Schema({
     schedule_time : String,
     slot: String,
