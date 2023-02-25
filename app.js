@@ -13,7 +13,8 @@ app.use(express.static("public"));
 
 
 mongoose.set('strictQuery', true);
-var url = process.env.MONGO_URL;
+//var url = process.env.MONGO_URL;
+var url = "mongodb://sahildharme8:Sahil%40123@ac-sxxruws-shard-00-00.ikilmb0.mongodb.net:27017,ac-sxxruws-shard-00-01.ikilmb0.mongodb.net:27017,ac-sxxruws-shard-00-02.ikilmb0.mongodb.net:27017/?ssl=true&replicaSet=atlas-eswafc-shard-0&authSource=admin&retryWrites=true&w=majority"
 mongoose.connect(url, {useNewUrlParser: true});
 const apiSchema = new mongoose.Schema({
     schedule_time : String,
