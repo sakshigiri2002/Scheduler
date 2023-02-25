@@ -13,7 +13,7 @@ app.use(express.static("public"));
 
 
 mongoose.set('strictQuery', true);
-mongoose.connect("mongodb+srv://sahildharme8:Sahil%40123@apidata.ikilmb0.mongodb.net/?retryWrites=true&w=majority", {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://sahildharme8:Sahil%40123@apidata.ikilmb0.mongodb.net/?retryWrites=true&w=majority/schedules", {useNewUrlParser: true});
 const apiSchema = new mongoose.Schema({
     schedule_time : String,
     slot: String,
